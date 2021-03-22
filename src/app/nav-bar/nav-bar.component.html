@@ -1,0 +1,18 @@
+<nav class="top-nav-container" id="topNavContainer">
+    <div class="logo">
+        <img src="../../assets/img/ps_logo.png" alt="" width="100px">
+    </div>
+    <ul class="top-nav-links with-indicator">
+        <li class="top-nav-link" id="{{link.id}}" *ngFor="let link of topNavLinks; let i = index"
+            (click)="goTo(link.url, $event)" 
+            (mouseover)="link[i] = true" 
+            (mouseleave)="link[i] = false">
+            <i class="{{link.fa}}"></i>
+            <a>{{link.name}}</a>
+        </li>
+        <hr>
+    </ul>
+    <div class="progress-on-scroll-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+</nav>
